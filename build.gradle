@@ -29,7 +29,7 @@ publishing {
         create("myLib",MavenPublication) {
             groupId = 'com.incode'
             artifactId = 'backend-service-api-schema'
-            version = '0.4.0-SNAPSHOT'
+            version = '0.5.0-SNAPSHOT'
             from components.java
         }
     }
@@ -38,7 +38,7 @@ publishing {
             url "https://maven.pkg.github.com/aleksandarnikolic84/company-registry-service-api-schema"
             credentials {
                 username = "aleksandarnikolic84"
-                password = "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"
+                password = "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"
             }
         }
     }

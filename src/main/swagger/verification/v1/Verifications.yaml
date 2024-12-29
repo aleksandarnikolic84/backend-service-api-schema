@@ -1,0 +1,40 @@
+summary: "Find Verification by"
+get:
+  description: |-
+    This endpoint returns verification
+  tags:
+    - verification
+  operationId: getVerification
+  parameters:
+    - name: verificationId
+      in: path
+      description: The unique identifier of the verification.
+      required: true
+      schema:
+        type: string
+  responses:
+    200:
+      description: |
+        Verification result
+      content:
+        application/json:
+          schema:
+            $ref: '../models/Verification.yaml'
+    400:
+      description: '400 - The request was malformed or missing a field.'
+      content:
+        application/json:
+          schema:
+            $ref: '../../common/Error.yaml'
+    404:
+      description: '404 - Record does not exist for requested parameter.'
+      content:
+        application/json:
+          schema:
+            $ref: '../../common/Error.yaml'
+    503:
+      description: '503 - The Service is unavailable.'
+      content:
+        application/json:
+          schema:
+            $ref: '../../common/Error.yaml'

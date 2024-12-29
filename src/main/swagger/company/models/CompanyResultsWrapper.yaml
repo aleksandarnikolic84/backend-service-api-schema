@@ -1,0 +1,16 @@
+type: object
+description: |-
+  Results
+properties:
+  match:
+    $ref: 'Company.yaml'
+  possible_matches:
+    type: integer
+    description: Number of possible matches for searched criteria
+  other_results:
+    type: array
+    description: List of Companies
+    items:
+      $ref: 'Company.yaml'
+    minItems: 0
+required: [ otherResults ]

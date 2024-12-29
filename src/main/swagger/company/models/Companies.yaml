@@ -1,0 +1,12 @@
+type: object
+description: |-
+  List of Companies.
+properties:
+  verificationId:
+    type: string
+    description:  Verification identifier
+  query:
+    type: string
+    description:  Company identifier - searched criteria
+  results:
+    $ref: 'CompanyResultsWrapper.yaml'

@@ -1,0 +1,47 @@
+summary: "Find Primary Companies"
+get:
+  description: |-
+    This endpoint returns list of  Companies.
+  tags:
+    - companies
+  operationId: findCompanies
+  parameters:
+    - name: query
+      in: query
+      description: Company identifier
+      required: true
+      schema:
+        type: string
+    - name: verificationId
+      in: query
+      description: Verification identifier, randomly generated UUID
+      required: true
+      schema:
+        type: string
+    - name: upToSize
+      in: query
+      description: Up to companies which can be retrieved in otherResults section. Max number of item 100.
+      required: no
+      schema:
+        type: integer
+        maximum: 100
+  responses:
+    200:
+      description: |
+        Returns list of Companies.
+      content:
+        application/json:
+          schema:
+            $ref: '../models/Companies.yaml'
+    400:
+      description: '400 - The request was malformed or missing a field.'
+      content:
+        application/json:
+          schema:
+            $ref: '../../common/Error.yaml'
+    503:
+      description: '503 - The Service is unavailable.'
+      content:
+        application/json:
+          schema:
+            $ref: '../../common/Error.yaml'

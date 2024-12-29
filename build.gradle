@@ -38,7 +38,7 @@ publishing {
             url "https://maven.pkg.github.com/aleksandarnikolic84/company-registry-service-api-schema"
             credentials {
                 username = "aleksandarnikolic84"
-                password = "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"
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }

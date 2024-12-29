@@ -9,11 +9,18 @@ REST API definition of the Company Registry service
 
 * Installed Gradle.
 
-### Build With
+### Build & local Publish with
 
 ```
-gradle build
+gradle build publishToMavenLocal
+```
+
+#### Publish to local & remote registry
+
+```
+gradle build publish
 ```
 
 ### Author
 Aleksandar Nikolic
+
